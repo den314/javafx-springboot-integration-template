@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="346.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.silesiandevs.pizzaservice.controllers.LoginController">
+
+    <children>
+        <Label layoutX="71.0" layoutY="110.0" text="Password" />
+
+        <Button fx:id="loginBtn" layoutX="71.0" layoutY="194.0" mnemonicParsing="false" onAction="#doLogin" prefHeight="31.0" prefWidth="187.0" text="Login" />
+        <Label fx:id="usernameLbl" layoutX="71.0" layoutY="32.0" text="Username" />
+        <TextField fx:id="usernameTxt" layoutX="71.0" layoutY="65.0" />
+        <TextField fx:id="passwordTxt" layoutX="71.0" layoutY="138.0" />
+    </children>
+
+</AnchorPane>
