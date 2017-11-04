@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -20,32 +21,24 @@ public class LoginController implements Initializable {
     private TextField usernameTxt;
 
     @FXML
-    private TextField passwordTxt;
+    private PasswordField passwordTxt;
 
     public void doLogin(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == loginBtn) {
+
             System.out.println("login btn clicked");
-
-            String username = usernameTxt.getText();
-
-            if (username.isEmpty()) {
-                System.out.println("username cannot be empty!");
-                return;
-            }
-
-            System.out.println("Trying to login with: " + username);
+            System.out.println("Trying to login with: " + usernameTxt.getText());
+            System.out.println("Trying to login with: " + passwordTxt.getText());
         }
-
-
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        BooleanBinding textField1Valid = Bindings.createBooleanBinding(() -> !usernameTxt.getText().isEmpty(), usernameTxt.textProperty());
-
-        BooleanBinding textField2Valid = Bindings.createBooleanBinding(() -> !passwordTxt.getText().isEmpty(), passwordTxt.textProperty());
-
-        loginBtn.disableProperty().bind(textField1Valid.not().or(textField2Valid.not()));
+        
+        BooleanBinding isUsernameFilled = Bindings.createBooleanBinding(() -> !usernameTxt.getText().isEmpty(), usernameTxt.textProperty());
+        BooleanBinding isPasswordFilled = Bindings.createBooleanBinding(() -> !passwordTxt.getText().isEmpty(), passwordTxt.textProperty());
+        // if username and password is filled, enable login btn
+        loginBtn.disableProperty().bind(isUsernameFilled.not().or(isPasswordFilled.not()));
     }
 }
