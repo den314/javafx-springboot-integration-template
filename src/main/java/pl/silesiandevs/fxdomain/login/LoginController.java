@@ -29,12 +29,13 @@ public class LoginController implements Initializable {
     @FXML
     private PasswordField passwordTxt;
 
-    public void doLogin(ActionEvent actionEvent) throws IOException, URISyntaxException {
+    // TODO: does not provide real login functionality yet
+    public void doLogin(ActionEvent actionEvent) {
 
         System.out.println("login btn clicked");
         System.out.println("Trying to login with: " + usernameTxt.getText());
         System.out.println("Trying to login with: " + passwordTxt.getText());
-
+        // show next scene to user
         PizzaServiceApplication.showView(ClientView.class);
     }
 
