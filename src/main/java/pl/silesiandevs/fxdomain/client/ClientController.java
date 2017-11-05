@@ -3,18 +3,17 @@ package pl.silesiandevs.fxdomain.client;
 import de.felixroske.jfxsupport.FXMLController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.silesiandevs.model.Customer;
 import pl.silesiandevs.repositories.CustomerRepository;
 
 import javax.xml.soap.Text;
+import java.util.List;
 
 @FXMLController
-public class ClientController {
+public class ClientController{
 
     @FXML
     private TextField phoneNumber;
@@ -35,7 +34,7 @@ public class ClientController {
     private TextArea comment; // ??? not sure if its a good name for this var // Pole: UWAGI
 
     @FXML
-    private TextArea payment;
+    private ComboBox payment;
 
     @FXML
     private Button saveBtn;
@@ -46,7 +45,7 @@ public class ClientController {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public void doContinue(ActionEvent actionEvent){
+        public void doContinue(ActionEvent actionEvent){
         System.out.println("Dalej button clicked.");
     }
 
@@ -62,7 +61,7 @@ public class ClientController {
         c.setFlatNumber(flatNumber.getText());
         c.setCityName(cityName.getText());
         c.setComment(comment.getText());
-        c.setPayment(payment.getSelectedText().toString());
+        c.setPayment(payment.getValue().toString());
         System.out.println("creting customer " + c);
 
         customerRepository.save(c);
