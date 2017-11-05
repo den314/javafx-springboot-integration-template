@@ -5,17 +5,38 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.silesiandevs</groupId>
-    <artifactId>PizzaService</artifactId>
+    <artifactId>pizza-service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-
+        <spring.boot.version>1.5.7.RELEASE</spring.boot.version>
     </properties>
 
     <dependencies>
-
+        <!-- Support for JavaFX integration and Spring Boot -->
+        <dependency>
+            <groupId>de.roskenet</groupId>
+            <artifactId>springboot-javafx-support</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <!-- Spring Boot deps -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <!-- Embedded H2 DB -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
