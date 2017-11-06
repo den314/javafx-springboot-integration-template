@@ -13,7 +13,7 @@ import javax.xml.soap.Text;
 import java.util.List;
 
 @FXMLController
-public class ClientController{
+public class ClientController {
 
     @FXML
     private TextField phoneNumber;
@@ -45,11 +45,11 @@ public class ClientController{
     @Autowired
     private CustomerRepository customerRepository;
 
-        public void doContinue(ActionEvent actionEvent){
+    public void doContinue(ActionEvent actionEvent) {
         System.out.println("Dalej button clicked.");
     }
 
-    public void doCancel(ActionEvent actionEvent){
+    public void doCancel(ActionEvent actionEvent) {
         System.out.println("Anuluj button clicked.");
     }
 
