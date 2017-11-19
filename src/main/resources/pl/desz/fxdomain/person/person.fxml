@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.desz.fxdomain.person.PersonController">
+   <center>
+      <Button fx:id="checkBtn" mnemonicParsing="false" onAction="#showAll" prefHeight="68.0" prefWidth="106.0" text="Check it now" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Label prefHeight="258.0" prefWidth="600.0" text="By clicking this button your JavaFXController should have autowired PersonRepository, once you click at this button controller will run method on that repo and list result from DB in the console logs. If you don't get null pointer exception, the it works." textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

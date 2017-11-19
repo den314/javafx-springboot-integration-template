@@ -1,8 +1,8 @@
-package pl.silesiandevs.fxdomain.client;
+package pl.desz.fxdomain.login;
 
 import de.felixroske.jfxsupport.AbstractFxmlView;
 import de.felixroske.jfxsupport.FXMLView;
 
 @FXMLView
-public class ClientView extends AbstractFxmlView {
+public class LoginView extends AbstractFxmlView {
 }

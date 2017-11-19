@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.silesiandevs</groupId>
-    <artifactId>pizza-service</artifactId>
+    <groupId>pl.desz</groupId>
+    <artifactId>javafx-spring-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -41,6 +41,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>6.0.6</version>
+        </dependency>
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
         </dependency>
     </dependencies>
 

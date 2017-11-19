@@ -1,4 +1,4 @@
-package pl.silesiandevs.fxdomain.login;
+package pl.desz.fxdomain.login;
 
 import de.felixroske.jfxsupport.FXMLController;
 import javafx.beans.binding.Bindings;
@@ -9,11 +9,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import pl.silesiandevs.PizzaServiceApplication;
-import pl.silesiandevs.fxdomain.client.ClientView;
+import pl.desz.SampleApplication;
+import pl.desz.fxdomain.person.PersonView;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -36,7 +34,7 @@ public class LoginController implements Initializable {
         System.out.println("Trying to login with: " + usernameTxt.getText());
         System.out.println("Trying to login with: " + passwordTxt.getText());
         // show next scene to user
-        PizzaServiceApplication.showView(ClientView.class);
+        SampleApplication.showView(PersonView.class);
     }
 
     @Override
